@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{8D9817CC-2AA8-C130-77DC-52601E3E0BBE}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_SCRIPTS/ARInteractions.cs">
+    <Files>
+      <File FileName="Assets/_SCRIPTS/ARRaycast.cs" Line="8" Column="2" />
+      <File FileName="Assets/_SCRIPTS/ARInteractions.cs" Line="13" Column="31" />
+      <File FileName="Assets/_SCRIPTS/SpeedRotation.cs" Line="8" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
