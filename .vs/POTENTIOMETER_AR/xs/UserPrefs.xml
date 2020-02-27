@@ -1,9 +1,7 @@
 ﻿<Properties StartupConfiguration="{71B43334-743C-BFD4-B0BB-4BB93704961B}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_SCRIPTS/CountSceneObjects.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_SCRIPTS/InstanceManager.cs">
     <Files>
-      <File FileName="Assets/_SCRIPTS/MeshCombiner.cs" Line="110" Column="1" />
-      <File FileName="Assets/_SCRIPTS/CountSceneObjects.cs" Line="13" Column="2" />
-      <File FileName="Assets/_SCRIPTS/MeshCombineEditor.cs" Line="57" Column="9" />
+      <File FileName="Assets/_SCRIPTS/InstanceManager.cs" Line="9" Column="41" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

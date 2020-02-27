@@ -3,18 +3,32 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using System;
+using System.Linq;
 
+[ExecuteInEditMode]
 public class MeshCombiner : MonoBehaviour
 {
+    [Header("1 DÉFINISSEZ LE NOM DE VOTRE MERGE")]
     public string _name_of_your_merge;
     public static UnityEngine.Object[] selection;
+
+    [Header("2 SÉLECTIONNEZ LES ÉLÉMENTS A MERGER")]
     public GameObject[] currentSelection;
     private GameObject raw;
-    public List<GameObject> _saveMergeData = new List<GameObject>();
 
+    [Header("3 LIST DES ÉLÉMENTS MERGÉ SAUVEGARDÉ")]
+    public List<GameObject> _saveMergeData = new List<GameObject>();
+    public static string _nameMerge;
+    public static GameObject _selectMeshInstance;
+
+    [Header("4 CHOISSISEZ L'ÉLÉMENT A INSTANCIÉ")]
+    public GameObject _selectMeshInstanceGO;
+
+ 
     public void SelectGOforMerge()
     {
         ArrayUtility.Add(ref currentSelection, Selection.activeGameObject);
+        _selectMeshInstance = null;
     }
 
     public void SetGOinEmptyGO()
@@ -33,7 +47,7 @@ public class MeshCombiner : MonoBehaviour
         currentSelection = new GameObject[0];
 
     }
-
+   
     public void ResetArray()
     {
         currentSelection = new GameObject[0];
@@ -86,9 +100,9 @@ public class MeshCombiner : MonoBehaviour
     
         Debug.Log("save original gameobject");
         GameObject prefab = PrefabUtility.SaveAsPrefabAssetAndConnect
-        (raw, "Assets/" + _name_of_your_merge + "_original.prefab", InteractionMode.AutomatedAction);
+        (raw, "Assets/_ORIGINAL/" + _name_of_your_merge + "_original.prefab", InteractionMode.AutomatedAction);
 
-        for (int i = 0; i <= _saveMergeData.Count; i++)
+        for (int i = 0; i < _saveMergeData.Count; i++)
         {
             if (_saveMergeData[i].gameObject == null)
             {
@@ -101,9 +115,16 @@ public class MeshCombiner : MonoBehaviour
     {
         Debug.Log("save prefab");
         GameObject prefab = PrefabUtility.SaveAsPrefabAssetAndConnect
-        (raw, "Assets/" + _name_of_your_merge + "_merge.prefab", InteractionMode.AutomatedAction);
+        (raw, "Assets/_MERGE_MESH/" + _name_of_your_merge + "_merge.prefab", InteractionMode.AutomatedAction);
         _saveMergeData.Add(prefab);
+        Debug.Log(_nameMerge);
 
+     
     }
 
+    public void InstantiateMergeMesh()
+    {
+        Instantiate(Selection.activeGameObject);
+     
+    }
 }

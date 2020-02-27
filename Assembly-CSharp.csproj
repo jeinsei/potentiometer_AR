@@ -64,7 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\_SCRIPTS\ARInteractions.cs" />
     <Compile Include="Assets\_SCRIPTS\ARRaycast.cs" />
-    <Compile Include="Assets\_SCRIPTS\CountSceneObjects.cs" />
+    <Compile Include="Assets\_SCRIPTS\InstanceManager.cs" />
     <Compile Include="Assets\_SCRIPTS\MeshCombineEditor.cs" />
     <Compile Include="Assets\_SCRIPTS\MeshCombiner.cs" />
     <None Include="Assets\StreamingAssets\Vuforia\test_caen.xml" />
