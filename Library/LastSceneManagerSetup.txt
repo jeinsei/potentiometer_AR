@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/_SCENES/1_RAYCAST_CHANGE_COLOR_MATERIAL.unity
+- path: Assets/UnityTools.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

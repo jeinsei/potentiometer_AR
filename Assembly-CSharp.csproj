@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{8D9817CC-2AA8-C130-77DC-52601E3E0BBE}</ProjectGuid>
+    <ProjectGuid>{71B43334-743C-BFD4-B0BB-4BB93704961B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -64,40 +64,42 @@
   <ItemGroup>
     <Compile Include="Assets\_SCRIPTS\ARInteractions.cs" />
     <Compile Include="Assets\_SCRIPTS\ARRaycast.cs" />
-    <Compile Include="Assets\_SCRIPTS\SpeedRotation.cs" />
+    <Compile Include="Assets\_SCRIPTS\CountSceneObjects.cs" />
+    <Compile Include="Assets\_SCRIPTS\MeshCombineEditor.cs" />
+    <Compile Include="Assets\_SCRIPTS\MeshCombiner.cs" />
     <None Include="Assets\StreamingAssets\Vuforia\test_caen.xml" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>/Users/noe/Documents/_PROJETS_UNITY/VUFORIA_CLOUD_MAIN_3D/test_caen/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>/Users/noe/Documents/_PROJETS_UNITY/POTENTIOMETER_AR_MAIN/POTENTIOMETER_AR/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>/Users/noe/Documents/_PROJETS_UNITY/VUFORIA_CLOUD_MAIN_3D/test_caen/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>/Users/noe/Documents/_PROJETS_UNITY/POTENTIOMETER_AR_MAIN/POTENTIOMETER_AR/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="VuforiaScripts">
-      <HintPath>/Users/noe/Documents/_PROJETS_UNITY/VUFORIA_CLOUD_MAIN_3D/test_caen/Library/ScriptAssemblies/VuforiaScripts.dll</HintPath>
+      <HintPath>/Users/noe/Documents/_PROJETS_UNITY/POTENTIOMETER_AR_MAIN/POTENTIOMETER_AR/Library/ScriptAssemblies/VuforiaScripts.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/noe/Documents/_PROJETS_UNITY/VUFORIA_CLOUD_MAIN_3D/test_caen/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/noe/Documents/_PROJETS_UNITY/POTENTIOMETER_AR_MAIN/POTENTIOMETER_AR/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>/Users/noe/Documents/_PROJETS_UNITY/VUFORIA_CLOUD_MAIN_3D/test_caen/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>/Users/noe/Documents/_PROJETS_UNITY/POTENTIOMETER_AR_MAIN/POTENTIOMETER_AR/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>/Users/noe/Documents/_PROJETS_UNITY/VUFORIA_CLOUD_MAIN_3D/test_caen/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>/Users/noe/Documents/_PROJETS_UNITY/POTENTIOMETER_AR_MAIN/POTENTIOMETER_AR/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="VuforiaEditorScripts">
-      <HintPath>/Users/noe/Documents/_PROJETS_UNITY/VUFORIA_CLOUD_MAIN_3D/test_caen/Library/ScriptAssemblies/VuforiaEditorScripts.dll</HintPath>
+      <HintPath>/Users/noe/Documents/_PROJETS_UNITY/POTENTIOMETER_AR_MAIN/POTENTIOMETER_AR/Library/ScriptAssemblies/VuforiaEditorScripts.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>/Users/noe/Documents/_PROJETS_UNITY/VUFORIA_CLOUD_MAIN_3D/test_caen/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>/Users/noe/Documents/_PROJETS_UNITY/POTENTIOMETER_AR_MAIN/POTENTIOMETER_AR/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>/Users/noe/Documents/_PROJETS_UNITY/VUFORIA_CLOUD_MAIN_3D/test_caen/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>/Users/noe/Documents/_PROJETS_UNITY/POTENTIOMETER_AR_MAIN/POTENTIOMETER_AR/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/noe/Documents/_PROJETS_UNITY/VUFORIA_CLOUD_MAIN_3D/test_caen/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/noe/Documents/_PROJETS_UNITY/POTENTIOMETER_AR_MAIN/POTENTIOMETER_AR/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>/Users/noe/Documents/_PROJETS_UNITY/VUFORIA_CLOUD_MAIN_3D/test_caen/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>/Users/noe/Documents/_PROJETS_UNITY/POTENTIOMETER_AR_MAIN/POTENTIOMETER_AR/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/2019.2.18f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -271,7 +273,7 @@
       <HintPath>/Applications/Unity/2019.2.18f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
     <Reference Include="Vuforia.UnityExtensions">
-      <HintPath>/Users/noe/Documents/_PROJETS_UNITY/VUFORIA_CLOUD_MAIN_3D/test_caen/Library/PackageCache/com.ptc.vuforia.engine@8.5.9/Vuforia/Plugins/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
+      <HintPath>/Users/noe/Documents/_PROJETS_UNITY/POTENTIOMETER_AR_MAIN/POTENTIOMETER_AR/Library/PackageCache/com.ptc.vuforia.engine@8.5.9/Vuforia/Plugins/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>/Applications/Unity/2019.2.18f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
