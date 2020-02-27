@@ -62,7 +62,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Editor\Example.cs" />
+    <Compile Include="Assets\Editor\InstanceManagerEditor.cs" />
+    <Compile Include="Assets\Editor\MeshCombineEditor.cs" />
     <Reference Include="UnityEditor.TestRunner">
       <HintPath>/Users/noe/Documents/_PROJETS_UNITY/POTENTIOMETER_AR_MAIN/POTENTIOMETER_AR/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>

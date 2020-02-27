@@ -1,9 +1,5 @@
 ﻿<Properties StartupConfiguration="{71B43334-743C-BFD4-B0BB-4BB93704961B}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_SCRIPTS/InstanceManager.cs">
-    <Files>
-      <File FileName="Assets/_SCRIPTS/InstanceManager.cs" Line="9" Column="41" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
