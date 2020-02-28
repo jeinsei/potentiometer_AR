@@ -336,3 +336,7 @@
 /Users/noe/Documents/_PROJETS_UNITY/VUFORIA_CLOUD_MAIN_3D/test_caen/Temp/bin/Debug/VuforiaScripts.pdb
 /Users/noe/Documents/_PROJETS_UNITY/VUFORIA_CLOUD_MAIN_3D/test_caen/Temp/bin/Debug/VuforiaEditorScripts.pdb
 /Users/noe/Documents/_PROJETS_UNITY/VUFORIA_CLOUD_MAIN_3D/test_caen/Temp/bin/Debug/Vuforia.UnityExtensions.xml
+/Users/noe/Documents/_PROJETS_UNITY/POTENTIOMETER_AR_MAIN/POTENTIOMETER_AR/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+/Users/noe/Documents/_PROJETS_UNITY/POTENTIOMETER_AR_MAIN/POTENTIOMETER_AR/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache
+/Users/noe/Documents/_PROJETS_UNITY/POTENTIOMETER_AR_MAIN/POTENTIOMETER_AR/obj/Debug/Assembly-CSharp.dll
+/Users/noe/Documents/_PROJETS_UNITY/POTENTIOMETER_AR_MAIN/POTENTIOMETER_AR/obj/Debug/Assembly-CSharp.pdb

@@ -8,6 +8,7 @@ public class ARRaycast : MonoBehaviour
     [Header("RAYCAST ELEMENTS")]
     public ImageTargetBehaviour _imageTarget_1;
     public ImageTargetBehaviour _imageTarget_2;
+
     public GameObject[] _target;
     public Material[] _setMaterial;
     public GameObject _setGOMaterial;
@@ -60,24 +61,28 @@ public class ARRaycast : MonoBehaviour
             {
                 Debug.Log("set0");
                 _setGOMaterial = GameObject.FindWithTag("set0");
+                _mainTargetMaterial.GetComponent<Animator>().Play("animation_scale");
 
             }
             if (hit.collider.tag == "set1")
             {
                 Debug.Log("set1");
                 _setGOMaterial = GameObject.FindWithTag("set1");
+                _mainTargetMaterial.GetComponent<Animator>().Play("animation_slider");
 
             }
             if (hit.collider.tag == "set2")
             {
                 Debug.Log("set2");
                 _setGOMaterial = GameObject.FindWithTag("set2");
+                _mainTargetMaterial.GetComponent<Animator>().Play("animation_mesh");
 
             }
             if (hit.collider.tag == "set3")
             {
                 Debug.Log("set3");
                 _setGOMaterial = GameObject.FindWithTag("set3");
+                _mainTargetMaterial.GetComponent<Animator>().Play("animation_color");
 
             }
 

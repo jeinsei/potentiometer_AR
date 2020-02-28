@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/_SCENES/3_INSTANCE_MESH_TOOLS.unity
+- path: Assets/_SCENES/2_MERGE_MESH_TOOLS.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

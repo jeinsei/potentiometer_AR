@@ -14,7 +14,7 @@ public class MeshCombiner : MonoBehaviour
 
     [Header("2 SÉLECTIONNEZ LES ÉLÉMENTS A MERGER")]
     public GameObject[] _currentSelection;
-    private GameObject _raw;
+    public GameObject _raw;
 
     [Header("3 LIST DES ÉLÉMENTS MERGÉ SAUVEGARDÉ")]
     public List<GameObject> _saveMergeData = new List<GameObject>();
@@ -26,10 +26,18 @@ public class MeshCombiner : MonoBehaviour
     {
         Debug.Log("set gameObject in array");
         ArrayUtility.Add(ref _currentSelection, Selection.activeGameObject);
-        var _original = Directory.CreateDirectory(Application.dataPath + "/_ORIGINAL");
-        var _merge_mesh =Directory.CreateDirectory(Application.dataPath + "/_MERGE_MESH");
-    }
 
+        if(!Directory.Exists(Application.dataPath + "_OIGINAL") && !Directory.Exists(Application.dataPath + "_MERGE_MESH"))
+        {
+            Debug.Log("nous crééons vos dossiers!");
+            var _original = Directory.CreateDirectory(Application.dataPath + "/_ORIGINAL");
+            var _merge_mesh =Directory.CreateDirectory(Application.dataPath + "/_MERGE_MESH");
+        }
+        else
+        {
+            Debug.Log("vos dossiers sont déjà créés !");
+        }
+    }
     // set les gameObjects du tableau dans un emptyGameObject
     public void SetGOinEmptyGO()
     {
@@ -61,41 +69,40 @@ public class MeshCombiner : MonoBehaviour
     // Combine les différents enfants de L'emptyGameObject
     public void CombineMeshes()
     {
+
         Quaternion oldRot = _raw.transform.rotation; // save old rotation of the gameobject
         Vector3 oldPos = _raw.transform.position; // save old position of the gameobject
 
         _raw.transform.rotation = Quaternion.identity; // set 0 in rotation
         _raw.transform.position = Vector3.zero; // set 0 in position
 
-        MeshFilter[] filters = _raw.GetComponentsInChildren<MeshFilter>(); // stock all mesh children in an array
+        MeshFilter[] meshFilters = _raw.GetComponentsInChildren<MeshFilter>();
 
-        Debug.Log(name + " is combining " + filters.Length + " meshes!");
+        Mesh finalMesh = new Mesh(); // create an empty mesh for stock all meshe
+       
+        CombineInstance[] combine = new CombineInstance[meshFilters.Length];
+       
+        Debug.Log(name + " is combining " + meshFilters.Length + " meshes!");
 
-        Mesh finalMesh = new Mesh(); // create an empty mesh for stock all meshes
-
-        CombineInstance[] combiners = new CombineInstance[filters.Length]; // create combine Array and "combine" all mesh
-
-        for (int a = 0; a < filters.Length; a++)
+        int i = 0;
+        while (i < meshFilters.Length)
         {
-            if (filters[a].transform == transform)
-                continue;
+            combine[i].mesh = meshFilters[i].sharedMesh;
+            combine[i].transform = meshFilters[i].transform.localToWorldMatrix;
+            meshFilters[i].gameObject.SetActive(false);
 
-            combiners[a].subMeshIndex = 0;
-            combiners[a].mesh = filters[a].sharedMesh;
-            combiners[a].transform = filters[a].transform.localToWorldMatrix; // set the same position transform between Main object and the mesh combine
+            i++;
         }
 
-        finalMesh.CombineMeshes(combiners); // combine all mesh in empty mesh
+        finalMesh.CombineMeshes(combine); // combine all mesh in empty mesh
 
-        _raw.GetComponent<MeshFilter>().sharedMesh = finalMesh; // set all mesh in Mesh component
+        _raw.GetComponent<MeshFilter>().sharedMesh = finalMesh;
 
-        _raw.transform.rotation = oldRot; // pose Gameobject on native rotation
-        _raw.transform.position = oldPos; // pose Gameobject on native position
+        _raw.transform.rotation = oldRot;
+        _raw.transform.position = oldPos;
 
-        for( int a = 0; a < _raw.transform.childCount; a++) // Enable children of the Main Gameobject
-        {
-            _raw.transform.GetChild(a).gameObject.SetActive(false);
-        }
+        _raw.transform.gameObject.SetActive(true);
+
     }
 
     // Sauvegarde le MainGameObject avant la fusion dans le dossier _ORIGINAL
